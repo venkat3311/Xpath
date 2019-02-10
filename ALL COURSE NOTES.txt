@@ -1,0 +1,3872 @@
+270909854754
+
+********03092018******************
+Selenium ---> Mon to Fri (7 to 8:30)
+Java ---> Sat (8 to 10) {OOPs, Collections & Exceptions}
+
+JIRA
+Bugzilla
+Agile  ----> Week-end
+SQL
+Unix
+
+Project ---> Bank
+
+Framework ---> JUnit & TestNG --> Data Driven, POM, Hybrid & Cucumber
+
+Tools used in Project
+
+i. Jenkins
+ii. Maven      ---> Mon to Fri (7 to 8:30)
+iii. AutoIT
+iv.  Git hub/SVN
+v.   Docker (Selenium GRID)
+
+40 Days
+
+********04092018******************
+**************************************************************************
+                              Selenium IDE
+*************************************************************************
+
+Selenium IDE is a Chrome and Firefox plugin which records and plays back user interactions with the browser.
+
+Selenium IDE2 ---> FF ---> x.html
+
+Selenium IDE3 ---> FF, GC ---> x.side
+
+---> Easily configure
+---> Easily Record & Play the scripts
+---> No programming
+---> Easily locate the elements
+---> Easily debug the scripts
+
+***************************************************************************
+
+HTML ---> Hyper Text Markup Language
+
+
+Tag ---> <text>
+
+i. Container 
+
+   <html>
+    ===
+    ===
+   </html>
+
+ii. Standalone ---> <br>
+
+Attribute
+
+   <person name=x height=y weight=z color=p>
+
+Locating Elements
+Handling Elements
+
+
+
+********05092018******************
+*************************************************************************
+                     Locating Elements in Selenium IDE
+*************************************************************************
+
+selenium IDE            WebDriver
+---------------------------------------------
+
+1. By Using ID          1. By Using ID
+2. By Using Name        2. By Using Name
+3. By Using Class Name  3. By Using Class Name
+4. By Using Link Text   4. By Using Link Text
+5. By Using XPath       5. By Using XPath
+6. By Using CSS         6. By Using CSS
+7. By Using Identifier  7. By Using Partial Link Text
+8. By Using DOM         8. By Using TagName
+
+*************************************************************************
+
+1. ID
+
+   id=value
+   Ex: id=tags
+       id=pass
+
+2. Name
+
+   name=value
+   Ex: name=pass
+       name=lastname
+
+3. Class
+
+   className=value
+   Ex: className=inputtext
+
+4. Link Text
+
+   linkText=name of the link
+   Ex: linkText=Forgotten account?
+       linkText=Gmail
+
+   <a> text </a>
+
+5. XPath ---> is language used to locate HTML elements/XML nodes
+
+   i. Absolute ---> Root (HTML)
+
+      //html/body/div[1]/div[2]/div/div/div/div/div[2]/form/table/tbody/tr[1]/td[1]/label
+
+      //html/body/div[1]/div[3]/div[1]/div/div/div/div/div[2]/div[1]/div[1]/span
+
+   ii. Relative ---> Current tag/ Near by tags
+
+       //*[@id="email"]
+       //*[@id="lst-ib"]
+
+99.99
+
+
+********07092018******************
+************************************************************************
+                         XPath Functions
+************************************************************************
+
+//input[@id='b']
+     OR
+//*[@id='b']
+
+1. last()
+
+    //input[@id='b'][last()]
+
+    //input[@id='b'][last()-1]
+
+2. position()
+
+    //input[@id='b'][position()=2]
+
+3. text()
+
+   //tagname[text()='value']
+
+   Ex: //label[text()='Email or Phone']
+       //a[text()='Forgotten account?']
+
+4. starts-with()
+
+   yui_3_18_0_3_1536285421680_699
+   yui_3_18_0_3_1536285462291_744
+   yui_3_18_0_3_1536285691450_701
+
+   //a[@href='https://in.yahoo.com/']
+   //a[text()='Home']
+
+   //tagname[starts-wth(@attributename,'starting value')]
+
+   Ex: //a[starts-with(@id,'yui')]
+
+   aria-label=Mobile number or email address
+
+   //input[starts-with(@aria-label,'Mobile')]
+
+5. contains()
+
+   Attribute ---> //tagname[contains(@attributename,'partial value')]
+
+                  //input[contains(@aria-label,'or')]
+
+   Text ---> //tagname[contains(text(),'partial text')]
+
+             //label[contains(text(),'Email')]
+
+**************************************************************************
+                           XPath Operators
+*************************************************************************
+
+1. And
+
+   //input[@name='sex' and @value='1']
+   //input[@name='sex' and @value='3']
+
+2. OR
+
+   //input[@name='sex' or @value='3']
+   //input[@name='sex12' or @value='2']
+
+Firepath ---> FF54
+
+Selenium IDE
+
+Chropath ---> Chrome, FF
+
+Java ---> 8 to 10
+
+Class
+Object
+Method
+Constructor
+Package
+Interface                  
+
+
+
+********10092018******************
+DAY 7- 10th Sep 2018: 7AM to 8.30 AM
+
+https://seleniumhq.org
+
+
+
+*****************************************
+Selenium IDE Limitations:
+1. Suports only Firefox and Chrome browsers alone 
+2. Only supports for single programs not for ccomplex programs.
+3. Unable to parameterize data
+4. Will not get/geneate detailed reports 
+5. unable to automate flash/flex controls
+
+******************************************
+****Selenium RC  [Remote Control]- Test Tool/API
+It supports all languages -we can autoomate scripts
+
+****Webdriver --> Test Tool/API [predefined classes, methods, interfaces]
+webdriver2- default browser -- Firefox
+Webdriver3- no default browser and supports for all browsers.
+
+It supports all languages -we can autoomate scripts
+
+Difference b/w RC and Webdriver:
+RC need selenium server to communicate between broser and script
+where as in Web server selenium server is optional [Remote machines only it is required]
+
+If scripts are in same machine[A] and execute in same machine[A] -selenium server is not reqired
+If execution in remote/other machine[B] -then selenium server required for Web driver also.....
+
+No official support for RC, only have for IDE, webdriver, GRID..
+
+______________________________________________
+Software congiguration-Web Driver:
+
+It is open source packages..
+
+1. JDK [ver 1.8 above is required/compatible]
+   JDK ver 1.7 and above compatible for webdriver2
+Oracle.com/technetwork/java/release
+
+2. Eclipse*** [Editor required], Intellij, Netbeans
+3. Jar files [.zip, .rar- archive formats/files]
+a] Selenium server jar files
+b] Java client library / C# client library- based on language we use for scripting.
+
+.jar-- to group java files
+.war--
+Download Eclipse: 
+Eclipse.org/downlaods/package
+Eclipse IDE for Java EE developers- 32-bit- select another mirror to select US s/w
+
+US_ columbia University - Eclipse s/w zip file []
+JNI error - if they have compatibility issues
+
+Download Jar files- Seleniumhq.com/download
+selenium-server-standalone-3/14/0.jar
+java-client
+
+**********************
+Steps to Configure Webdriver
+********************************
+1. Download and install required softwares
+2. Ceate root folder in your system [Eg: Selenium_Scripts]
+--create Lib folder [Copy/Extract zip of selenium-java-3.14.0.zip]
+--
+3.Launch eclipse using/click on eclise exe
+  configure workspace/root folder path/URL [IDE Photon July 2018]
+ 
+4. Create java project 
+File--new --project-select java project--click next-click next- Enter project name [ABC Bank]- Click Finish
+
+
+5. Configure Jar files:
+Rightclick on project --build path --configure biuld path -- 
+select Java build path -- Libraries tab -- add External jars button --select required jars..
+
+
+will appeared in reference library folder in project
+
+lib folder - 2 jar files 
+
+
+
+********11092018******************
+qtt.selenium@gmail.com
+
+DAY 8- 11th Sep 2018: 7AM to 8.30 AM
+
+https://seleniumhq.org
+
+vasantha p
+nandini bhupathi
+naga tejaswi
+mohan ulasa
+gowthami meda
+nandini bhupathi
+Pradeep kuma yajili
+
+**********************************************
+
+****PACKAGE--> Classes + Interfaces
+
+Define package :
+package packagename;
+
+
+HOW TO IMPORT CLASS/INTERFACES:
+import packagename.classname; [to import single class] 
+         OR
+import packagename.*;
+
+HOW TO INSERT CLASS/INTERFACE IN PACKAGE
+class classname
+{
+===
+
+====
+}
+
+we can insert n number of class/interface in package
+define interface/class inside package.
+
+
+
+*****Interface -->
+
+Interface is nothing but blue print of class
+
+class Shapes
+{
+   void area()
+  {
+    ===
+    ===
+  }
+}
+
+method name is same -where method code is vary/change object to object 
+this method called as an abstract method..
+
+method without method body is called as abstract method..
+
+to define interface -syntax
+interface interfacename
+{
+
+}
+it consists only methods and variables
+all methods in interface are public, abstract.
+all variables in interface are public,static,final
+
+eg: 
+interface shapes
+{
+   void area()
+
+}
+
+____definition of interface:
+class classname implements interfacename
+{
+   ====
+   ====
+}
+** Rectangle 
+class Rect implements Shapes
+{
+   public void area()
+ {
+   ===
+   ===
+ }
+
+
+class Tri implements Shapes
+{
+   public void area()
+ {
+   ===
+   ===
+ }
+
+
+how to access class numbers?
+by using object we can access class numbers
+
+methods,tables
+
+
+how to access interface numbers?
+as inter
+
+we are unable to create object to interface
+once interface is defined we will go to 
+
+with help of impementation class we can create object in interface:
+
+
+ABCBank Projecct in selenium:
+
+in src create a new package:
+STEPS: right click on src -- new -- package: name as abcpack for package:
+
+right click on package -- new - class - name class as FirstScript-select public and finish uncheck inherited and check public static -finish
+
+
+***Write test case in webdriver:
+we need to know below 2 things before write cases:
+
+1] Locating Elements 
+2] Handling elements 
+
+Selenium IDE-----
+First launch browser [manually]
+lanch tool
+recod test case
+execute case 
+
+
+Webdriver will launch browser through script..
+we need WebDriver Drivers to launch browsers..
+
+******* WebDriver Drivers *********
+
+
+API- App programming API - predefined classes/interfaces/methods 
+selenium site- -download page -- java doc link will open webdrive API details...
+
+interface name also Interface WebDriver
+once interface is defined -we can use for more classes
+
+
+ChromeDriver
+EdgeDriver
+FirefoxDriver
+InternetExporerDriver
+SafariDriver
+OpearaDriver
+RemoteWebDriver [for remote machine browsers)
+
+1. FirefoxDriver [if i want to execute test case in FF browser i use this class]
+
+to create driver class we use below 2 options/syntax:
+
+
+
+[both class/interface methods can access-prefer second syntax]
+FirefoxDriver d=new FirefoxDriver();
+       OR
+WebDriver d=New FirefoxDriver();
+WebDriver d=New ChromeDriver();
+WebDriver d=New InternetExplorerDriver();
+WebDriver d=New SafariDriver();
+WebDriver d=New OperaDriver();
+WebDriver d=New EdgeDriver();  MS Edge browser..
+                     
+***to execute test case in remote machine use below:
+WebDriver d=New RemoteWebDriver(url of hub, browsername in remote machine);
+
+hub- selenium server
+remote machine -tc execution server is mandatory:
+
+
+IE browser will supports windows only , not in mac
+Chrome, FF can supports all will supports in other OS (MAc) also..
+
+
+
+System.setProperty("driver execcutable name", "path to driver execcutable")
+websriver.geco.driver
+
+
+
+3.14- webdriver 3
+driver executable required , set path in sys property..
+
+selenium hq site
+download 
+third paty driver
+
+Fiefox -latest - v0.21.0- win32 compatible
+about FF 64 bit ver browser 
+download 64 bit ver driver support 
+save zip and unzip..
+geckodriver-v.20.1-win64
+
+
+
+
+
+//CODE FOR BROWSES..
+
+// set property of driver..
+System.setProperty("webdriver.geco.driver","E:\\Driver server\\gecodriver.exe");
+//launch browser..
+WebDriver d=new FirefoxDriver();
+// load webpage..
+d.get("https://www.faccebook.com/");
+//pause 4 sec 
+Thread.sleep(4000);
+//close browser
+d.quit();
+
+
+throws Exception
+
+
+
+Package ---> Classes + Interfaces
+
+package packagename;
+
+import packagename.classname;
+          OR
+import packagename.*;
+
+package pack;
+class A
+{
+   ===
+   ===
+}
+
+
+Interface ---> blue print of class
+
+interface interfacename
+{
+   method ---> public,abstract
+   var    ---> public,static, final
+}
+
+class classname implements interfacename
+{
+   ===
+   ===
+}
+
+interface Shapes
+{
+  void area();
+ 
+}
+
+class Rect implements Shapes
+{
+  public void area()
+  {
+    ===
+    ===
+  }
+  public void show()
+  {
+    ===
+    ===
+  }
+}
+
+Rect r=new Rect();
+r.area()
+r.show()
+
+Shapes r=new Rect();
+r.area()
+
+class Tri implements Shapes
+{
+  public void area()
+  {
+    ===
+    ===
+  }
+}
+
+Locating Elements
+Handling Elements
+
+************************************************************************
+                          WebDriver Drivers
+***********************************************************************
+
+
+ChromeDriver, EdgeDriver, EventFiringWebDriver, FirefoxDriver, InternetExplorerDriver, OperaDriver, RemoteWebDriver, SafariDriver
+
+1. FirefoxDriver
+
+   FirefoxDriver d=new FirefoxDriver(); ---> FirefoxDriver + WebDriver
+              OR
+   WebDriver d=new FirefoxDriver() ---> WebDriver
+
+2. ChromeDriver
+
+   WebDriver d=new ChromeDriver();
+
+3. InternetExplorerDriver
+
+   WebDriver d=new InternetExplorerDriver();
+
+4. SafariDriver
+
+   WebDriver d=new SafariDriver();
+
+5. OperaDriver
+
+   WebDriver d=new OperaDriver();
+
+6. EdgeDriver
+
+   WebDriver d=new EdgeDriver();
+
+7. RemoteWebDriver
+
+   WebDriver d=new RemoteWebDriver(url of hub,browsername)
+
+System.setProperty("driver executable name","path to driver executable")
+
+
+JXL ---> .xls (97 to 2003)
+
+POI ---> .xls, .xlsx (2007 or above)
+
+*************************************************************************
+                  Reading data from excel by using POI API
+*************************************************************************
+
+Download & configure POI jar files ---> 
+
+http://poi.apache.org/download.html
+
+1. FileInputStream fis=new FileInputStream("url of excel")
+
+2. XSSFWorkbook wb=new XSSFWorkbook(fis)
+
+   .xlsx ---> XSSF
+   .xls ----> HSSF
+
+3. XSSFSheet s=wb.getSheet("sheetname")
+               OR
+   XSSFSheet s=wb.getSheetAt(index)
+
+4. s.getLastRowNum()
+
+5. s.getRow(rowindex).getCell(colindex).getStringCellValue()
+
+6. wb.close()
+
+
+
+
+
+qtt.selenium@gmail.com
+
+get method will load webpage in curent browser 
+it is parameterized method.. 
+
+
+predefiined interface -- import jars to remove errors in script...
+
+Web driver -2 - FF default browser
+Web driver 3- no default browser
+
+
+
+
+
+
+********12092018******************
+
+*************************************************************************
+                 Locating Elements in WebDriver
+*************************************************************************
+
+1. ID
+2. Name
+3. ClassName
+4. LinkText
+5. PartailLink Text
+6. XPath
+7. CSS
+8. TagName
+
+ 	
+findElement(By by) ---> Find the first WebElement using the given method.
+
+findElements(By by) --> Find all elements within the current page using the given mechanism.
+
+sum(int x)
+
+--------------------------------------------------------------------------
+
+1. ID
+
+   Selenium IDE ---> id=value
+                     id=lst-ib
+   
+   WebDriver d=new FirefoxDriver();
+   d.findElement(By.id("value"))
+   Ex: d.findElement(By.id("lst-ib"))
+
+2. Name
+
+   d.findElement(By.name("value"))
+   Ex: d.findElement(By.name("q"))
+
+3. ClassName
+
+   d.findElement(By.className("value"))
+   Ex: d.findElement(By.className("gsfi"))
+
+4. Link Text
+
+   d.findElement(By.linkText("name of the link"))
+   Ex: d.findElement(By.linkText("Gmail"))
+
+5. Partial Link Text
+
+   d.findElement(By.partialLinkText("partial link name")
+   Ex: d.findElement(By.partialLinkText("in"))
+
+6. XPath
+
+   d.findElement(By.xpath("xpath expression"))
+   Ex: d.findElement(By.xpath("//a[contains(text(),'Gmail')]"))
+
+7. TagName
+ 
+   d.findElement(By.tagName("name of the tag"))
+
+   No of links ---> d.findElements(By.tagName("a")).size()
+   No of frame ---> d.findElements(By.tagName("frame")).size()
+
+  
+
+
+
+
+
+
+
+Class ---> U U
+Interface --> U U
+Method ---> L U
+Package --> L
+Var     --> L U
+
+
+
+
+
+
+********14092018******************
+
+***************************************************************************
+                      Handling Elements
+*************************************************************************** Method types we used for actions on below elements
+
+1. Text box
+2. Text area
+3. Button
+4. Link
+5. Check box
+6. Radio button
+7. DD
+8. Multi DD
+9. Text
+
+--------------------------------------------------------------------------
+
+http://book.theautomatedtester.co.uk/chapter1
+
+
+1. Text -3 methods used for handle text box..
+ 
+   sendKeys(java.lang.CharSequence... keysToSend) //type or append text in textbox.
+   clear() //clears content of the text box
+   getAttribute(java.lang.String name)//to get text from text box..
+
+
+
+2. Text Area---4 methods used for handle text box..
+
+   sendKeys(java.lang.CharSequence... keysToSend)
+   clear()
+   getAttribute(java.lang.String name)
+   sendKeys("Selenium\nAppium") // types in multiline comments 
+
+3. Button- 2 methods to handle
+   click() 
+   submit()
+
+4. Link -1 methods used for handle link
+   click()
+
+5. Check box--2 methods used for handle checkbox.. 
+   click()
+   isSelected() ---> T/F
+
+6. Radio button-- 2 methods to handle radio button
+   click()
+   isSelected() ---> T/F
+  
+//input[@value='Log In']
+
+7. DropDown
+
+   Select dd=new Select(WebElement element)
+
+   dd.selectByIndex(int index)
+   dd.selectByValue(java.lang.String value)
+   dd.selectByVisibleText(java.lang.String text)
+   dd.getFirstSelectedOption().getText()
+   List<WebElement> ee=dd.getOptions() 
+   getText()
+
+http://book.theautomatedtester.co.uk/chapter1
+
+
+********15092018******************
+
+**************************************************************************
+                       This Keyword
+**************************************************************************
+
+This keyword refers current class members
+
+Var ---> this.varname
+Methods --> this.methodname()
+Cons
+
+**************************************************************************
+                        Inheritance
+**************************************************************************
+
+Reusability
+
+class childclassname extends parentclassname
+{
+  ====
+  ===
+  ===
+}
+
+Super keyword refers super class members from child class
+
+Var ---> super.var
+Methods --> super.methodname()
+Cons ---> super(params)
+
+Method Overriding ---> 
+
+Method Overloading ---> 2 or more
+
+Types of Inheritance
+
+OOP's
+
+1. Single
+2. Multiple
+3. HeirarChical
+4. Multilevel
+**************************************************************************
+Polymorphisam
+
+Poly ---> Many
+morphisam ---> forms
+1. Static ---> compile time ---> Method Overloading
+2. Dynamic --> Run time ---> Method Overriding
+
+
+http://book.theautomatedtester.co.uk/chapter1
+14 Sep 2018
+List is interface defining collctions in page
+
+*******how to handle elements:
+
+below elements can exist on any web page
+1. Text box
+2. Text area
+3. Button
+4. Link
+5. Checkbox
+6. Radio button
+7. Dropdown
+8. Multi Dropdown
+9. Text
+
+
+----------------------------------------------
+1. Text box  [3 methods for below]
+sendkeys(java.lang.CharSequence...keysToSend)
+clear()
+getAttribute(java.lang.String name)
+
+
+Type text, append text, clear the text, get text from text box.
+
+step 1- we need to identify/locate an eliment first
+using ID, name, link, link text, properties
+
+Selenium Webdriver API page- 
+
+Webelement - interface
+findElement
+findElements
+
+if return type is void -we can not call any interface/method
+
+
+to type or append text in to text box go for sendKeys method
+parameterize method
+sendkeys(java.lang.CharSequence...keysToSend)
+
+to clear text box content go for clear() method
+clear()
+
+how to type text in text box
+to get the value of textbox input
+getAttribute(java.lang.String name)
+
+----------------------------------------------------
+2. Text Area [3 mthods we will use]
+public void main(Sting[] args)
+
+Text field -single line text
+Text area - multi line text input
+
+sendkeys(java.lang.CharSequence...keysToSend)
+clear()
+getAttribute(java.lang.String name)
+
+sendKeys("Selenium\nAppium")  *handle for multiline text:
+
+\t 
+\n -- new line
+
+------------------------------------------------------------
+3. Button 
+to handle buttons we have 2 methods below
+click()
+submit()
+
+click()-  we donot have any restrictions
+submit()- when element type should be Submit and it should in form
+element type = button -submit method will not work.
+element type = submit and defined inside form tag- we can use submit method..
+
+
+----------------------------------------------
+4. Link
+to handle link we have below method
+click()
+
+----------------------------------------------
+5. Check box
+Either we check or uncheck the check box..
+click()  
+isSelected() ---->T/F
+
+click() method will do below 2 actions:
+[if check box is not checked-it going to check]
+[if check box is checked-it going to uncheck the checkbox]
+
+isSelected()  //method to verify and return true/false values
+it will return bolean value [True/False]
+
+
+-------------------------------------------------
+6. Radiobutton
+click()  
+isSelected() ---->T/F
+
+
+select and verify the status of selected or not
+
+
+
+
+****TEST SCENARIO and design script in Webdriver
+open facebook
+enter username
+enter password
+click login
+
+
+create new class --FacebookLogin
+with main method -- check public checkbox
+
+//Launch browser
+System.setProperty("webdriver.gecko.driver",
+WebDriver d=New FirefoxDriver();
+
+d.get("https://facebook.com");
+d.findElement
+
+
+id =u_0_2 - dynamic property - then use xpath for element
+
+//tagname [xpath syntax]
+//input[@value='Login In']
+d.findElement(By.xpath("//input[@value='Login In']")).click();
+//pause 4 sec
+Thresd.sleep(4000);// use throws exception after main method[Exception]
+d.quit();
+
+
+**************
+----------------------------------
+7. Dropdown 
+
+need to create select object with locator ptoperty..
+
+Select dd=new Select(WebElement element)// we should pass locator
+  dd.selectbyindex(int index) 
+  dd.selectByValue(java.lang.String value)
+  dd.selectByVisibleText(java.lang.String text)-
+  dd.getFirstSelectedOption().gettext() - to capture selected record text
+  List<webElement> ee=dd.getOptions()   - to get list of records in DD
+  getText()
+
+
+we have 3 methods for Dropdown
+1.SelectByindex
+  dd.selectbyindex(int index) 
+//select by index number -then choose this method)Apr --4(4th options) ; Aug -8 index starts with 0 number
+
+2.SelectByValue
+  dd.selectByValue(java.lang.String value)
+// if dd value is select by "attribute value" -then use this method
+
+3.SelectByVisibleText
+  dd.selectByVisibleText(java.lang.String text)
+//visible text on webpage -select an option in dropdown..
+Apr for Apr month value in dropdown
+
+
+Select, multi select, verify value, verify order, verify selected value get selected or not
+
+Select option
+verify selected option
+verify all option values/order of values in dropdown..
+
+for handle DD --we have predefined class is Select class
+
+check source code -- define in select tag-we can use Select class 
+to identify class members 
+
+method,variable,constructor 
+
+getFirstSelectedOption() //will give locator value and selected option name.
+
+to get available options in dropdown we use below method/interface
+
+
+
+//Launch browser  -- WebDriver
+//open URL
+//get DD name by locator
+//select dropdown value by index
+
+//select dropdown value by attribute value
+//select dropdown value by VisibleText
+//pause screen [optional]
+//print selected option
+//pause screen
+//close browser
+
+
+
+
+8. Multi Dropdown:
+
+multi dropdown to select more thatn one dropdown records
+we can unselect selected records from multi dropdown.
+
+First create object to select class
+  select dd=new select(webElement element)
+  dd.selectbyindex(int index) 
+  dd.selectByValue(java.lang.String value)
+  dd.selectByVisibleText(java.lang.String text)-
+
+  List<webElemetn>  dd.getAllSelecctedOptions(); to get all records in DD
+  getText()
+  List<webElemetn>dd.getAllSelecctedOptions(); 
+
+dd.deselectByIndex  - select/unselect by one record
+dd.deselectByValue - select/unselect by one record
+dd.deselectByVisibleText - select/unselect by one record
+ dd.deselectAll();
+     
+  dd.getFirstSelectedOption().gettext() - to capture selected record text
+  List<webElement> ee=dd.getOptions()   - to get list of records in DD
+  getText()
+
+
+to unselect selected option
+
+dd.isMultiple();  -method to check multi DD or not  (T/F)
+
+
+
+Prog example:
+ need to select all M dd records - unselect all records in DD
+
+
+//
+WebDriver d=new FirefoxDriver();
+//define on frame- select element -
+//load web page
+//switch driver focus to frame
+//select 
+
+array- length
+collections-size
+
+
+
+********15092018******************
+**************************************************************************
+                       This Keyword
+**************************************************************************
+
+This keyword refers current class members
+
+Var ---> this.varname
+Methods --> this.methodname()
+Cons
+
+**************************************************************************
+                        Inheritance
+**************************************************************************
+
+Reusability
+
+class childclassname extends parentclassname
+{
+  ====
+  ===
+  ===
+}
+
+Super keyword refers super class members from child class
+
+Var ---> super.var
+Methods --> super.methodname()
+Cons ---> super(params)
+
+Method Overriding ---> 
+
+Method Overloading ---> 2 or more
+
+Types of Inheritance
+
+OOP's
+
+1. Single
+2. Multiple
+3. HeirarChical
+4. Multilevel
+**************************************************************************
+Polymorphisam
+
+Poly ---> Many
+
+morphisam ---> forms
+
+1. Static ---> compile time ---> Method Overloading
+
+2. Dynamic --> Run time ---> Method Overriding
+
+
+
+
+
+
+
+********17092018******************
+select dd=new Select(locator);
+
+
+
+When ID name link not exists go for 
+Xpath or CSS
+
+Xpath-
+CSS - faster that Xpath
+
+1. TaG name
+cSS=tagname
+
+2 ID
+css=#idvalue
+css=tagname#idvalue
+
+3. Class
+
+css=.classvalue
+css=tagname.classvalue
+
+4. Unique attribute
+
+XPath --> //tagname[@uattributename='value']
+css=tagname[uattributename='value']
+eg:css=lable[for='email']
+
+5. Parent unique attribute.
+XPath --> //ptagname[@puattributename='value']/ctagname
+
+Unique ID:
+css=#tagname[uattributename='value']
+
+Unique Class:
+
+class unique attribute
+parent - login_form
+child - [for=;email']
+login_form[for='email]
+1. parent having 
+
+2- parent having unique class
+css=.html17magic label[for='email']
+
+3 if child having class -go for 3rd .else doont go 
+css=#login_form >.html17magic label[for='email']
+
+
+
+Advance CSS Selectors..
+*************************************
+if any attribte value is lengthy string-then go for adv Ccss selecctors..
+
+
+css=input[aria-lable=Mobile number or email address]
+
+1. Starts-with text also we can locate
+
+css=tagname[attributename^='String value']
+css=input[aria-lable^='Mobile']
+
+css=tagname[attributename$='ending value']
+css=input[aria-lable$='address']
+
+2. Ends with 
+in X path - strats with function
+in CSS - starts with ^ symbol..
+in CSS - ends with $ symbol..
+
+
+3. Contains
+
+css=tagname[attributename*='partial value']
+css=input[aria-lable*='or']
+
+
+4. Position -we have 5 functions
+
+1.first- entire page first css=#b:first
+2.last--entire page first  css=#b:last
+3.first child - first in certain block
+4. last child -last in certain block
+5.nth child - to locate 2nd or last 
+
+
+1. if more than one element having same id to select first element in enire page
+2.
+if more than one element having same id to select last element in enire page
+
+
+css=.gb_T 
+
+If all elements having same class property
+css=#b:first   first element
+css=#b:last    last element
+css=#b:first-child
+css=#b:last-child
+css=#b:nth-child(3)
+
+
+***********************************
+SEP 22, 2018 JAVA CLASS
+*****************************
+
+
+setter- set the value 
+gettter -get the value 
+
+
+ 
+class A
+{
+
+
+class - new class EcDemo
+
+class EC
+{
+   private int age;
+   private String name;
+   public void setAge(int age)
+   {
+    this.age=age;
+   }
+   public void getAge()
+   {
+   public int getAge()
+   
+   }
+}
+
+
+private - can be used in local class only
+instance -var defined in class 
+accessifier - public, private..
+
+
+
+********18092018******************
+18 Sep 2018
+
+**************************************************************************
+                             JUnit
+**************************************************************************
+
+Framework ---> Set of guide lines/Define process
+
+Java ---> JUnit ---> JUnit3
+                ---> JUnit4 ---> JDK1.5 or above
+                ---> JUnit5 ---> JDK1.8 or above & Eclipse 4.7 or above
+
+     ---> TestNG
+
+JUnit 5 = JUnit Platform + JUnit Jupiter + JUnit Vintage
+JUnit platform- 
+JUnit Jupiter- which contains all Api
+JUnit Vintage- provides support for previous versions
+
+---> JUnit 5 requires Java 8 (or higher) at runtime.
+
+Annotations ---> Define execution order
+
+----------------------------
+    Junit5    | Junit4
+----------------------------
+  @Test       | @Test
+  @BeforeEach | @Before
+  @AfterEach  | @After
+  @BeforeAll  | @BeforeClass
+  @AfterAll   | @AfterClass
+  @Disabled   | @Ignore
+  @DisplayName| ----
+
+
+@BeforeEach --> 2, 5
+@AfterEach ---> 4, 7
+@BeforeAll ---> 1
+@AfterAll  ---> 8
+@Test1    ----> 3
+@Test2    ----> 6
+
+
+---------------------------------------------------------
+
+class FirstScript
+{
+   @BeforeEach ---> Launch the browser
+   @Test ----> Test steps
+   @AfterEach ---> close the browser
+}
+
+Assert ---> To verify values
+
+assertEquals(exp1,exp2)
+
+assertTrue(cond)
+
+assertFalse(cond)
+
+POM- Page object model
+
+many testing frameworks.. 
+
+Java - 2 open source unit testing frame works
+1] JUnit-
+2] TestNG- extension of JUnit is TestNG
+Majority people using TetsNG framewor... 
+ <3 yrs -TestNG; >3 Yrs both frameworks
+
+
+JUnit Annotations - will define execution order 
+if class having multiple methods - we need annotations to define order of execution
+
+JUnit5 - configure to project
+
+Annotations
+@Test--> required to define method as a test method.. [same as Junit 4, TestNG frameworks]
+
+
+
+@BeforeEach--> Before each test method
+
+class A
+{
+@Test
+@Test
+@BeforeEach 
+}  here it will execute 2 tiimes for each test method.
+
+
+@BeforeEach
+@AfterEach
+@BeforeAll
+@AfterALl
+@Disabled - diables this test to execute 
+@DisplayName- display custome name for test method..
+
+Main method is not reuired when you are using JUnit or TestNG
+for other programs main method is required..
+without main we can execute in JUnit/TestNG
+@Test annotation will exe
+
+public void setUp()
+//predefined method is setup
+
+Assert class methods..
+
+asserEquals(exp1,exp2) - to compare two quantities.. 
+int, string, char, float etc for comparison
+
+if result fail go for 
+assertTrue(cond)
+assertTrue(false)
+
+
+
+
+********19092018******************
+***************************************************************************
+                           Synchronization
+***************************************************************************
+
+1. ImplicitWait ---> Entire script
+
+   d.manage().timeouts().implicitlyWait(time,timeunits)
+   Ex: d.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
+
+2. ExplicitWait ---> Single
+
+   WebDriverWait wait=new WebDriverWait(d,time) ---> Seconds
+   wait.until(ExpectedConditions<cond>)
+
+   WebDriverWait wait=new WebDriverWait(d,120);
+wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//option[text()='Andhra Pradesh']")));
+
+3. Thread.sleep(time) ---> Milliseconds
+
+4. PageLoadTimeout
+
+   d.manage().timeouts().pageLoadTimeout(time,timeunits)
+
+
+AJAX
+
+//option[text()='Andhra Pradesh']
+ to avoid tool between system , application we need to use synchronization
+
+to avoid timing errors b/w tool and application
+
+
+1. Implicitwait
+it will provide Sync to entire script
+d.manage().timeouts().implicitltwait(time,timeunits)
+
+d driver object
+maanage() method -  returns options interface
+webdriver.options- interface--> timeouts(method)-- returns 
+WebDriver.TimeOuts() method -- implicitlyWait()method
+
+driver should wait until the element found in applcation
+
+https://veethi.com/places/India_banks
+AJAX dropdowns-userfriendly app is faster..
+Asyncronous Java script and XML-technic to create fast and dynamic web pages OR refreshing part of the page without reloading the entire webpage is AJAX..
+
+https://ifsccodebank.com
+
+To handle these ajax contols -we need syncronization..
+
+2. Explicitwait -- single component
+it will provide sync to single or particular element
+time should always in seconds..
+create object with 2 parameters
+create a condition- expectedconditions method
+
+WebDriverwait wait=new WebDriverWait(d,time)--seconds..
+wait.until(ExpectedConditions<cond>)
+
+ExpectedConditions
+
+JUNIT..
+New class - 
+
+@BeforeEach //open browser annotation
+
+@Test // actual execution test sccript logic
+
+
+@AfterEach //close browser
+
+
+3. Thread.sleep(time);-- stops execution as specified in milli seconds only
+
+
+4. pageLoadTimeout
+ d.manage().timeouts().pageLoadTimeout(3,TimeUnit,MINUTES);
+
+always use we should in @BeforeEach
+
+
+
+
+
+********20092018******************
+
+
+   Ex: css=.inputtext
+       css=input.inputtext
+
+4. Unique
+
+   XPath ---> //tagname[@uattributename='value']
+   css=tagname[uattributename='value']
+
+   Ex: css=label[for='email']
+
+5. Parent 
+
+   XPath ---> //ptagname[@puattributename='value']/ctagname
+
+   css=#pidvalue ctagname[cattributename='value']
+                  OR
+   css=.pclassvalue ctagname[cattributename='value']
+                  OR
+   css=#pidvalue > ctagname.classvalue
+
+   Ex: css=#login_form label[for='email']
+       css=.html7magic label[for='email']
+
+*************************************************************************
+                    Advanced CSS Selectors
+*************************************************************************
+aria-label=Mobile number or email address
+
+css=input[aria-label='Mobile number or email address']
+
+1. Starts-with
+
+    css=tagname[attributename^='Starting value']
+    Ex: css=input[aria-label^='Mobile']
+
+2. Ends-with
+
+   css=tagname[attributename$='ending value']
+   Ex: css=input[aria-label$='address']
+
+3. Contains
+
+   css=tagname[attributename*='partial value']
+   Ex: css=input[aria-label*='or']
+
+4. Position
+
+   css=#b
+
+   i. first ---> css=#b:first
+
+   ii. last ---> css=#b:last
+
+   iii. first-child ---> css=#b:first-child
+
+   iv.  last-child ---> css=#b:last-child
+
+    v.  nth-child  ---> css=#b:nth-child(3)
+
+**************************************************************************
+
+d.findElement(By.cssSelector('selector'))
+Ex: d.findElement(By.cssSelector("a.gb_P"))
+
+
+
+
+
+********21092018******************'
+
+
+   Ex: css=.inputtext
+       css=input.inputtext
+
+4. Unique
+
+   XPath ---> //tagname[@uattributename='value']
+   css=tagname[uattributename='value']
+
+   Ex: css=label[for='email']
+
+5. Parent 
+
+   XPath ---> //ptagname[@puattributename='value']/ctagname
+
+   css=#pidvalue ctagname[cattributename='value']
+                  OR
+   css=.pclassvalue ctagname[cattributename='value']
+                  OR
+   css=#pidvalue > ctagname.classvalue
+
+   Ex: css=#login_form label[for='email']
+       css=.html7magic label[for='email']
+
+*************************************************************************
+                    Advanced CSS Selectors
+*************************************************************************
+aria-label=Mobile number or email address
+
+css=input[aria-label='Mobile number or email address']
+
+1. Starts-with
+
+    css=tagname[attributename^='Starting value']
+    Ex: css=input[aria-label^='Mobile']
+
+2. Ends-with
+
+   css=tagname[attributename$='ending value']
+   Ex: css=input[aria-label$='address']
+
+3. Contains
+
+   css=tagname[attributename*='partial value']
+   Ex: css=input[aria-label*='or']
+
+4. Position
+
+   css=#b
+
+   i. first ---> css=#b:first
+
+   ii. last ---> css=#b:last
+
+   iii. first-child ---> css=#b:first-child
+
+   iv.  last-child ---> css=#b:last-child
+
+    v.  nth-child  ---> css=#b:nth-child(3)
+
+**************************************************************************
+
+d.findElement(By.cssSelector('selector'))
+Ex: d.findElement(By.cssSelector("a.gb_P"))
+
+********22092018******************
+*************************************************************************
+                            Abstraction
+************************************************************************
+
+Abstraction is a process of hiding the implementation details and showing only functionality to the user.
+
+abstract class Shapes
+{
+  abstract void area();
+  
+}
+
+class Rect extends Shapes
+{
+  public void area()
+  {
+    ===  
+    ===
+  }
+}
+
+class Tri extends Shapes
+{
+  public void area()
+  {
+    ===  
+    ===
+  }
+}
+
+*************************************************************************
+An interface in java is a blueprint of a class. It has static constants and abstract methods only.
+
+interface interfacename
+{
+   Var ---> public,static & final
+   Method --> public, abstract
+}
+
+class classname implements interfacename
+{
+  ===
+  ===
+}
+
+interface I
+{
+   void m1();
+   void m2();
+}
+
+*************************************************************************
+                        Extending Interface
+*************************************************************************
+
+1. Single
+
+2. Multiple
+
+3. Heirarchical
+
+4. Multi lavel
+
+*************************************************************************
+
+Encapsulation ---> Var + Method
+
+class A
+{
+   int x,y; ---> private
+   void sum() --> public
+   {
+     ===
+     ===
+   }
+}
+
+
+
+
+********23092018******************
+
+********24092018******************
+**************************************************************************
+                         Handling Multiple windows
+**************************************************************************
+
+d.switchTo().window(name/handle)
+
+handle ---> numeric id/alpha numeric id
+
+getWindowHandle() ---> Single
+
+getWindowHandles() --> set of window handles
+
+div[text()='Log In/Sign Up']
+
+Controlling windows..
+
+
+
+d.switch().name(id,name- for frames.
+
+d.switchTo().window(name/handle)--for windows. 
+
+[maximum use handle as parameter as some windows may not have name]
+handle is numeric ID/alphanumeric id..
+to generate this handle in Webdiver we have two methods
+
+
+1. getWindowHandle()-- generate single handle for all open windows.
+return type is list--
+list allows duplicate entries..
+
+2. getWindowHandles()-- generate set of handles based on active open windows. 5 windows- 5 handles
+return type is set--
+set allows unique entries..
+
+all handles in to collections in to h
+h=d.getWindowHandles()
+
+for loop
+we need to condition and executed based on condition true
+
+*for each loop
+based on number of elements in collection...which wil store in to s]
+for(String s:h)
+{
+system.out.println(s);
+}
+
+42992420842  eg handle
+42992420843
+
+
+Arraylist is predefined class in collections list
+
+dynaic array- dynamically we can increase/decrease size
+
+AraList<String> al=new ArrayList<String>(d.getWindowHandles);
+
+//swith drive focus from home to login
+
+d.swithTo().window(al.get(1);
+
+as they are 2 windows home ,login 
+
+assertTrue(d.findElemetn(By.id("User_Id")).isDisplayed();
+
+
+Iframe will not have more buttons and menu bar where popup window have..
+
+**************************************************************************
+                     Handling Browser History
+*************************************************************************
+reload page, back/forward buttons is handling browser history
+
+WebDriver interface - navigate() method... 
+
+WebDriver.Navigation is interface ..An abstraction is return of navigate method.
+access the browsers history and to navigate and open URL
+
+
+d.navigate().back()
+d.navigate().forward()
+d.navigate().refresh()
+d.navigate().to("url")
+
+Cookie ---> temp storage
+
+d.manage().deleteAllCookies()
+
+d.navigate().back()- move back
+d.navigate().forward()-move forward
+d.navigate().refresh()- refresh page
+d.navigate().to("url")- to navigate given url
+
+
+get()--it always send request to webserver..
+to()-- it checks in history and loan from history, if not sends request to webserver..
+to laod a new webpage in the current browser window..
+
+
+to delete all cookies from a webpage
+
+manage() method --- 
+WebDriver.Options -- interface
+
+***deleteAllCookies() method.. will delete all cookies on a web page.
+
+
+to delete specific cookie from a webpage
+
+****deleteCookie(Cookie)
+getCookies()
+
+we need to use this method before load webpage only...
+
+sync- 
+
+
+d.manage().deleletAllCookies();
+
+
+********25092018******************
+***************************************************************************
+                       Capturing Screenshots
+***************************************************************************
+
+getScreenshotAs(OutputType<X> target) ---> Capture the screenshot and store it in the specified location.
+
+float n=1.3;
+
+int x=(int)n;
+
+Exception ---> Run time error
+
+public String getScreenshot()
+{
+try
+{
+  === ---> Test code
+  ===
+  return "Pass";
+}
+catch(ExceptionType e)
+{
+  === ---> capture screenshot code
+  ===
+  return "Fail";
+}
+}
+
+n=10/0;
+
+
+
+
+********26092018******************
+***************************************************************************
+                          TestNG
+***************************************************************************
+
+TestNG is a testing framework inspired from JUnit and NUnit but introducing some new functionalities that make it more powerful and easier to use.
+
+1. Group Test
+2. Priority Test
+3. Dependency Test
+4. Listeners
+5. Auto Reports
+
+Event Driven
+
+**************************************************************************
+                      Steps to configure TestNG
+**************************************************************************
+
+1. Install TestNG plugin
+
+2. Add TestNG Library
+
+**************************************************************************
+                      TestNG Annotations
+**************************************************************************
+
+@BeforeSuite ---> 1
+@AfterSuite  ---> 12
+@BeforeTest  ---> 2
+@AfterTest   ---> 11
+@BeforeClass ---> 3
+@AfterClass  ---> 10
+@BeforeMethod --> 4, 7
+@AfterMethod ---> 6, 9
+@Test1 ---> 8
+@Test2 ---> 5
+
+
+Suite ---> set of test cases
+
+Main ---> JUnit ---> TestNG ---> Data Driven, POM, Cucumber & Hybrid
+
+
+
+********27092018******************
+***************************************************************************
+                        Handling Mouse Events
+***************************************************************************
+
+Actions a=new Actions(WebDriver driver) 
+
+a.click().perform()
+a.click(WebElement target).perform()
+a.contextClick().perform()
+a.contextClick(WebElement target).perform()
+a.doubleClick().perform()
+a.doubleClick(WebElement target).perform()
+a.moveByOffset(int xOffset, int yOffset).perform()
+a.moveToElement(WebElement target).perform()
+a.moveToElement(WebElement target, int xOffset, int yOffset).perform()
+a.dragAndDrop(WebElement source, WebElement target).perform()
+a.dragAndDropBy(WebElement source, int xOffset, int yOffset).perform()
+a.clickAndHold(source).moveToElement(target).release().build().perform()
+
+                      .moveByOffset(int xOffset, int yOffset)
+
+//div[@id='slider']/span
+
+Java Script ---> window.scrollBy(x,y)
+
+RemoteWebDriver --->  	
+executeScript(java.lang.String script, java.lang.Object... args)
+
+
+Handling mouse events in webdriver..
+
+
+mousehover..left,right click, move, drag and drop actions through -mouse
+
+WebDriver class -
+*************action Class methods..
+
+
+1. action method with ddefault parameter
+
+2. action method with parameter
+parameter-- is locator
+
+
+
+contextclick method -to click rightmouse action
+
+contextClick()
+contextClick(WebElement target)
+
+moveByOffset()
+given offset -pass x,y locations
+
+
+handle hover menu- 3 parameterized method..
+moveToElement(WebElement target, int xoffset, intyoffset)
+
+
+
+drag and drop action method::
+click and hold
+
+a] When source and traget exitst:
+click on hold location of source and move to the target location
+
+dragAndDrop(source,target)
+
+
+b] when target not available
+source locator and x,y offset of target location with 3 parameters
+
+dragAndDropBy(WebElement source, int xofffset, yoffset)
+
+
+
+c] call hold method, move method, release method
+clickAndHold(source).moveToElement(target).release().build().perform();
+
+clickAndHold(source).moveToElement(target)
+
+
+****perform() method is mandatory for all above methods..at end of each action.
+
+if more than actions performing -then first use build() method and 
+
+use to combine all methods in actions.
+
+
+handling web page Slider:
+
+
+
+
+handling desktop controls
+to move bowser slider- java script function
+
+windowscrollBy(x,y)- by using this we can handle browser slider
+
+calling to webdriver--
+
+RemoteWebdriver class 
+executeScript() method
+
+RemoteWebDriver
+
+
+typecasting -converting one data type to another type 
+
+
+********28092018******************
+*************************************************************************
+                  Handling Keyboard Events
+*************************************************************************
+
+Actions a=new Actions(WebDriver driver) 
+
+a.keyDown(java.lang.CharSequence key).perform()
+a.keyDown(WebElement target, java.lang.CharSequence key).perform()
+a.keyUp(java.lang.CharSequence key).perform()
+a.keyUp(WebElement target, java.lang.CharSequence key).perform()
+a.sendKeys(java.lang.CharSequence... keys).perform()
+
+**************************************************************************
+                       Handling Web Table
+**************************************************************************
+
+1. #Rows ---> tr's in a table
+
+2. #Cols ---> td's in row | td's/tr's in a table
+
+3. Verify cell data --> getText()
+
+Row#1, Col#1 Text:
+    1      2 Text:2
+
+if(row==5 && col==3)
+{
+  assertEquals("UK", getText())
+}
+
+
+
+handle keyborad event:
+keydown
+actions
+keyup
+sendkeys
+perform()
+build.perform()
+getwindowhandles- swith to window/tab
+
+8 to 10 ---> Java ---> Exception & Collections
+
+
+****handle webtables
+
+Find below:
+1. number of rows in table -- no of Tr's in a table
+
+2. number of columns in table--
+a) no of Tds in row
+b) td/tr in a table [if you not have column heading in table]
+
+3. verify the cell values
+getText method.
+
+
+column heading will be Th [table header]
+
+Row#1, col#1 text:
+Row#2, col#2 text:
+
+
+
+Row#5, COl#3
+if(row=5 && col==3)
+{
+assertEquals("UK", gettext());
+}
+
+**EXCEPTION HANDLING:**
+
+
+Try block execute always
+Catch block executes when error occur
+
+
+TRY
+{
+
+int a[]={1,2,3,4}; //array
+
+
+}
+
+Catch(arithmatic expression e)
+
+
+smooth termination 10/2 by try
+
+smooth termination 10/0 catch block
+
+
+if not handle- abnormal termination:
+
+Exceptions:
+
+ElementNotVisible exception
+Nosuchwindow
+nosuchFrameexception
+Staleelementreference exception
+[checked or unchecked excception?]
+
+Exception handling in webdriver:
+throws keyword
+try and catch 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+********02102018******************
+
+**************************************************************************
+               Read data from excel by using POI API
+**************************************************************************
+
+JXL ---> .xls (97 to 2003)
+
+POI ---> .xls and .xlsx (2007 or above) 
+
+Download & Configure POI jar files ---> http://poi.apache.org/download.html
+
+
+1. FileInputStream fis=new FileInputStream("url of excel file");
+
+2. XSSFWorkbook wb=new XSSFWorkbook(fis)
+
+   .xlsx ---> XSSF
+   .xls ----> HSSF
+
+3. XSSFSheet s=wb.getSheet("sheetname")
+                OR
+   XSSFSheet s=wb.getSheetAt(index)
+
+4. s.getLastRowNum()
+
+5. s.getRow(rowindex).getCell(colindex).getStringCellValue()
+
+6. wb.close()
+___________________________________________________________________
+02 OCT- how to read data from Excel source:
+Use POI API.
+wedrive not support MS office desktop app,hence we need to se JAVA API.
+JXL API supports only .xls format only -
+POI API going to support .xls (B/W 97 to 2003 ver)
+and .xlsx (>2007 ver)
+
+
+Download and configure POI JAR Files 
+apache.org -download- binary distribution- click on zip download linkn
+multiple mirrors
+_____________________________________________
+
+configure all jar files to the project build path.
+
+Use POI for XLS read data :
+1. Locate path of xls file
+create Fileinputstream object 
+FileInputStream fis=FileInputStream("path of excel file");
+
+2. create XSSF class
+XSSFWorkbook k wb=new XSSForkbook(fis) 
+
+.xlsx -- XSSF workbook
+.xls --- HSSF workbook  
+
+
+3. get the sheet from xls 
+XSSFSheet s=wb.getSheet("Sheetname");
+XSSFSheet s=wb.getSheet(index number);
+
+4. find number of rows in xls file use method below
+  s.getLastRowNum()
+
+5 Identify the cell and get content of the cell
+  s.getRow(rowindex).getCell(colindex).getStringCellValue();
+
+6. Close the workbook
+   wb.close();
+
+Confugure older jar files if issue with latest POI:
+3.17-20170915.zip older POI version.
+_____________________________________________
+
+for(int i=0;i<s.getLastRowNum()+1;i++)
+//
+{
+
+
+}
+
+
+1. prepare test data 
+'1234 as numberic value else it types as 12340
+2. Save input data as login
+3. 
+
+*************************************************************************
+                   Write data into excel by using POI
+*************************************************************************
+
+1. FileOutputStream fos=new FileOutputStream("url of excel file")
+
+2. XSSFWorkbook wb=new XSSFWorkbook()
+
+3. XSSFSheet s=wb.createSheet("sheetname")
+
+4. XSSFRow r=s.createRow(rowindex)
+
+5. r.createCell(colindex).setCellValue("data")
+
+6. wb.write(fos)
+
+7. fos.close()
+
+******************************************
+
+Read data from xls file and write status in to xls file
+
+WRITE DATA IN TO EXCEL USING POI:
+***********************************
+
+1. Define path of output xls file
+create object 
+FileOutputStream fos=new FileOutputStream("path of xls")
+
+2. create obj to XSSFworkbook class
+XSSFworkbook wb=new XSSFworkbook();
+(default constructor)
+
+3. need to create new sheet
+XSSFSheet s=wb.createSheet("Sheetname");
+
+4. Create row in new created sheet
+XSSFRow r=s.createRow(rowindex);
+
+5. Create cell and set cell value
+r.createCell(Colindex).setCellvalue("data");
+
+6. write or save data
+wb.write(fos);
+
+7. close the file
+fos.close();
+
+
+
+
+
+
+create reusable functions
+
+pblic void setCellData(int rowindex, int colindex,String result, )
+
+
+xl utilities
+getcelldata
+setcelldata
+
+
+
+
+
+
+********03102018******************
+***************************************************************************
+                           JDBC
+***************************************************************************
+
+1. Class.forName("driver name")
+
+2. Connection con=DriverManager.getConnection(url of db,username,password)
+
+   For connecting to MySQL URL will be: jdbc:mysql://hostname:port/dbname
+   Ex: jdbc:mysql://localhost:3306/MySQL
+
+   SQL Server ---> 
+   jdbc:sqlserver://localhost\\sqlexpress;user=sa;password=secret
+   sqljdbc.jar
+
+   Oracle DB ---> jdbc:oracle:thin:@localhost:1521:xe
+          ---> ojdbc7.jar
+
+3. Statement stmt=con.createStatement()
+
+Statement
+PreparedStatement
+CallableStatement
+
+4. ResultSet rs=stmt.executeQuery("Select * from studentinfo;")
+                     executeUpdate()
+
+5. while(rs.next())
+   {
+        rs.getString(colname)
+   }
+
+6. con.close()
+
+
+xl utilities
+getcelldata
+setcelldata
+
+_____________________
+
+JDBC..
+
+__________________
+
+Oracle
+ojdbc7.jar --jar file
+
+MySQL
+jdbc:mysql://hostname:port/dbname
+
+Sybase
+
+SQLServer
+jdbc:sqlserver://localhost\\sqlexpress;user=sa;password=sa
+
+
+MySQL s/w-- Download
+SQL Yog-- download
+
+1. Configure DB drivers
+  class.forName("driver name")
+
+2. Establish Database connection
+
+   Connection con=DriverManager.getConnection(url of database,username, password)
+
+3. create statement
+ statement stmt=con.createstatemetn()
+
+Interfaces:
+statement-statement direct query
+PreparedStatement- statement with inputs wit where cond
+CallableStatement- execute stored procedures
+
+Statement-interface will not combine, directly send to DB
+
+Prepared Statement-interface will compile and send to DB.
+
+4. Execute queries:
+
+ResultSet rs=stmt.executeQuery("Select * from studentinfo;")
+      .execcuteUpdate()("Select * from studentinfo where student 
+id=100;")
+
+5. while(rs.next())
+    
+  //next method returns true/false
+
+6. con(close)
+
+
+
+I-Insert
+D--Delete
+U-ExecuteUpdate()
+R- executeQuery()
+manual DB connection:
+a) UI mode:
+Open database
+submit username password
+b)cmd prompt:
+use mysql
+
+
+_________________________________________
+*****Execl utilities:
+
+1. create reference variables
+
+2. ExcelUtils(Sting path)
+   constructor
+3. use set cell data reusable function
+
+4. get cell data functions
+
+
+Reusable functions - data driven framework
+
+desining famework
+sendkeys- 
+click-
+setcelldata
+getcelldata
+
+
+Top 10 test automation tools
+
+Selenium
+Katalon
+UFT
+Watir
+IBM Rational Functional Tester
+Test Complete
+
+****Selenium Tools: 
+Automate web browsers:
+1.Selenium IDE
+2.WebDriver
+3.GRID
+
+********04102018******************
+**************************************************************************
+                         Creating Suites
+*************************************************************************
+
+TestNG ---> XML
+
+name=packagename.classname
+
+---------------------------------------------------------------------------
+                         TestNG Parallel Execution
+---------------------------------------------------------------------------
+
+1. Parallel Methods
+
+   <suite guice-stage="DEVELOPMENT" name="Default suite" parallel="methods">
+
+2. Parallel Classes
+
+   <suite guice-stage="DEVELOPMENT" name="Default suite" parallel="classes">
+
+3. Parallel Tests
+
+   <suite guice-stage="DEVELOPMENT" name="Default suite" parallel="tests">
+
+**************************************************************************
+          Steps to Run TestNG Suites from Command line
+**************************************************************************
+
+1. Set path to Java
+
+   Var Name: JAVA_HOME
+   Var Value: C:\Program Files\Java\jdk1.8.0_151
+ 
+   Var Name: path
+   Var Value: C:\Program Files\Java\jdk1.8.0_151\bin
+
+2. Set class path
+
+   set classpath=url of .class files;url of .jar files
+
+3. java org.testng.TestNG suitename.xml
+
+
+********05102018******************
+**************************************************************************
+                        Rerunning failed tests
+**************************************************************************
+
+TestNG Listeners ---> Event Driven
+
+Group Test ---> @Test(groups="name")
+
+DependencyTest ---> @Test(dependsOnMethods="methodname")
+                                   OR
+                    @Test(dependsOnGroups="groupname")
+
+PriorityTest ---> @Test(priority=number)
+
+EnabledTest  ---> @Test(enabled=false)
+
+Class
+Object
+Method
+Constructor
+
+qtt.selenium@gmail.com
+
+
+
+********06102018******************
+
+Class
+Object
+Method
+Constructor
+Package
+Interface
+
+*************************************************************************
+
+1. Class ---> Set of similar objects
+
+class classname
+{
+   Var
+   Methods
+   Constructor
+}
+
+2. Object ---> Instance of class
+
+i. new operator
+
+classname objname=new classname();
+
+objname.varname
+objname.methodname()
+
+Var ---> Memory location name
+
+int x=10;
+
+3. Method ---> Block executable statements
+
+   i. Method header
+   ii. Method Body
+
+  returntype methodname(param-list) ---> Header
+  {
+    ===
+    ===---> Method body
+  }
+
+  void sum() ---> default method
+  {
+    ===
+    ===
+  }
+  
+  void sum(int a,int b) ---> Param method
+  {
+    ====
+    ===
+  }
+  
+  int sum()
+  {
+    ===
+    ===
+    return 10
+  }
+
+4. Constructor is similar to method used initialize instance var
+
+   i. Class name & constructor name
+   ii. Automatically
+   iii. Does not return any value
+   iv.  Once per object
+
+5. Package ---> Class + Interfaces
+
+   Re-usability
+
+   package packagename;
+
+   import packagename.classname
+             OR
+   import packagename.*
+
+
+   Access Specifier    Outside class   Outsidepackage
+
+      public               Y                  Y
+      private              N                  N
+      Protected            Y                  Y (Parent-child)
+      default              Y (within package) N
+
+
+
+********07102018******************
+************************************************************************
+                         XPath Functions
+************************************************************************
+
+//input[@id='b']
+     OR
+//*[@id='b']
+
+1. last()
+
+    //input[@id='b'][last()]
+
+    //input[@id='b'][last()-1]
+
+2. position()
+
+    //input[@id='b'][position()=2]
+
+3. text()
+
+   //tagname[text()='value']
+
+   Ex: //label[text()='Email or Phone']
+       //a[text()='Forgotten account?']
+
+4. starts-with()
+
+   yui_3_18_0_3_1536285421680_699
+   yui_3_18_0_3_1536285462291_744
+   yui_3_18_0_3_1536285691450_701
+
+   //a[@href='https://in.yahoo.com/']
+   //a[text()='Home']
+
+   //tagname[starts-wth(@attributename,'starting value')]
+
+   Ex: //a[starts-with(@id,'yui')]
+
+   aria-label=Mobile number or email address
+
+   //input[starts-with(@aria-label,'Mobile')]
+
+5. contains()
+
+   Attribute ---> //tagname[contains(@attributename,'partial value')]
+
+                  //input[contains(@aria-label,'or')]
+
+   Text ---> //tagname[contains(text(),'partial text')]
+
+             //label[contains(text(),'Email')]
+
+**************************************************************************
+                           XPath Operators
+*************************************************************************
+
+1. And
+
+   //input[@name='sex' and @value='1']
+   //input[@name='sex' and @value='3']
+
+2. OR
+
+   //input[@name='sex' or @value='3']
+   //input[@name='sex12' or @value='2']
+
+Firepath ---> FF54
+
+Selenium IDE
+
+Chropath ---> Chrome, FF
+
+Java ---> 8 to 10
+
+Class
+Object
+Method
+Constructor
+Package
+Interface
+    
+                   
+
+
+********08102018******************
+************************************************************************
+                          OOPs
+************************************************************************
+
+1. Class & Object
+2. Inheritance
+3. Polymorphisam
+4. Abstraction
+5. Encapsulation
+
+------------------------------------------------------------------------
+
+Class ---> Set of similar objects
+
+class classname
+{
+  Var
+  Methods ---> Class members
+  Cons
+}
+
+Object ---> Instance of class
+
+i. new operator
+
+   classname objname=new classname()
+   objname.varname
+   objname.methodname()
+
+Var ---> Memory location name
+
+int x=10;  
+
+Method ---> Block of executable statements
+
+i. Method Header
+ii. Method Body
+
+returntype methodname(param-list) ---> Header
+{
+  ====
+  ==== ---> Body
+  ====
+}
+
+void sum1() ---> default
+{
+
+}
+
+void sum2(int a,int b) ---> Param
+{
+
+}
+
+int sum3()
+{
+  ===
+  return 10;
+}
+
+d.findElement().click()
+
+**************************************************************************
+ Constructor is similar to method used to initailize instance var
+
+i. Class name & constructor name
+ii. Automatically
+iii. Does not return any value
+iv.  Once per object
+
+Constructor Overloading ---> 2 or more
+
+
+
+
+
+
+********09102018******************
+************************************************************************
+                   Limitations of Selenium IDE
+************************************************************************
+
+1. Only FF & GC
+2. Only simple
+3. Data parameterization
+4. Detail Reports
+5. Flash/flex
+
+---------------------------------------------------------------------------
+
+Selenium RC ---> Test tool/ API
+
+WebDriver ---> Test tool/ API
+
+WebDriver2 ---> Default browser (FF)
+
+WebDrover3 ---> No default browser
+
+--------------------------------------------------------------------------
+                  Softwares Required to Configure WebDriver
+--------------------------------------------------------------------------
+
+1. JDK1.8 or Above
+
+   http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+
+   32 ---> x86
+   64 ---> x64
+
+2. Eclipse
+
+   http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/photon/R/eclipse-jee-photon-R-win32-x86_64.zip
+
+3. Jar files
+   i. Selenium-Server
+   ii. Java-client
+
+   https://www.seleniumhq.org/download/
+
+*************************************************************************
+                    Steps to Configure WebDriver
+*************************************************************************
+
+1. Download & Install required softwares
+
+2. Root folder ---> Lib ---> Copy required jar files
+
+3. Launch eclipse
+
+4. Create Java project
+
+5. Configure jar files
+
+
+
+
+
+********11102018******************
+*************************************************************************
+                        Limitations of Selenium IDE
+*************************************************************************
+
+1. Only FF, GC
+2. Data Driven
+3. Detail Reports
+4. Exception ---> Run time error
+5. Flash/flex
+
+**************************************************************************
+
+Selenium RC ---> Test tool/ API
+
+WebDriver ---> Test tool/ API
+
+WebDriver2 ---> Default browser (FF)
+WebDriver3 ---> No default browser
+
+**************************************************************************
+                   Softwares Requied to configure WebDriver
+**************************************************************************
+
+1. JDK1.8 or above
+
+   https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+
+   64 ---> x64
+   32 ---> x86
+
+2. Eclipse
+
+   http://www.eclipse.org/downloads/
+
+3. Jar files
+   i. Selenium-Server
+   ii. Selenium-java (client-combined)
+
+   https://www.seleniumhq.org/download/
+
+*************************************************************************
+                      Steps to Configure WebDriver
+*************************************************************************
+
+1. Download & Install required softwares
+
+2. Create Root folder ---> Lib ---> Copy required jar files
+
+3. Launch eclipse
+
+4. Create Java project
+
+5. Configure jar files
+
+
+*************************************************************************
+                        Limitations of Selenium IDE
+*************************************************************************
+
+1. Only FF, GC
+2. Data Driven
+3. Detail Reports
+4. Exception ---> Run time error
+5. Flash/flex
+
+**************************************************************************
+
+Selenium RC ---> Test tool/ API
+
+WebDriver ---> Test tool/ API
+
+WebDriver2 ---> Default browser (FF)
+WebDriver3 ---> No default browser
+
+**************************************************************************
+                   Softwares Requied to configure WebDriver
+**************************************************************************
+
+1. JDK1.8 or above
+
+   https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+
+   64 ---> x64
+   32 ---> x86
+
+2. Eclipse
+
+   http://www.eclipse.org/downloads/
+
+3. Jar files
+   i. Selenium-Server
+   ii. Selenium-java (client-combined)
+
+   https://www.seleniumhq.org/download/
+
+*************************************************************************
+                      Steps to Configure WebDriver
+*************************************************************************
+
+1. Download & Install required softwares
+
+2. Create Root folder ---> Lib ---> Copy required jar files
+
+3. Launch eclipse
+
+4. Create Java project
+
+5. Configure jar files
+
+
+
+
+*****************************************
+11 OCT 2018- CUCUMBER REPORTS**
+*******************************************
+
+Customezecucumber cucumber test results report
+we have 2 reports
+1 code to customize
+2- third party tool
+ Extent reports/API
+
+To use this api-goto site- extentreports.com
+we have extent reports in selenium -opensource and licenced/PRO ver also
+community version [BDD, interactive HTML report
+
+1 download and configure 4 jar files
+cucumber-extentsreports 3.1.0
+extentreports3.1.5
+feemarker2.3.28
+bson 3.8.0
+
+2, cucumber plugin- supports listeners 
+eventprograms - whenver test case executed -geneates HTML report.
+download and configure these jar files
+use same version
+
+
+//plugin={"html:Reports"}
+plugin={ "com.cucumber.listener.ExterCucumberFormatter:target/cucumber-reports/reporthtml}
+NOTE -comma not required for last line..in code.
+
+If no error shows in script code lines-- then use previous jar fles to avoid compatibility issues:
+selenium client combined 3.13 jar
+selenium server-standalone 3.13 jar
+
+go to maven reporsitory -search for cuucmber extent report jar files
+mavenrepository.com/artifact/java
+
+
+
+Feature file add another scenario:
+
+
+//@Sanity
+Scenario: Verfiy user is able to navigate to my account info page
+Given When user is on home page
+When Click on Sign In link
+And Enter user name and password
+And Click on Account Info link
+Then Verfiy Advance button in page/Member Account details
+And Close the browser
+
+
+
+//@Regression @Sanity [tc added in both groups]
+Scenario: Verfiy user is able to navigate to my account info page
+Given When user is on home page
+When Click on Sign In link
+And Enter user name and password
+And Click on Account Info link
+Then Verfiy Advance button in page/Member Account details
+And Close the browser
+
+
+Test Runner:
+dryRun = true,
+which will -generate missing snippet code/feature step code
+Then use code to create Step Definition class
+
+When dryrun disabled-then only all cases from Test Runner will be executed.. else all ignored .focus for missing snippet only.
+dryRun = false,
+
+
+
+STEPS to execute specific feature file cases:
+
+By using tags feature we can categorize cases
+These are similar to Groups in TestNG
+http://docs/cucumber.io/cucumberreference
+
+
+go to test runner class use one more option and enable
+tags={"Regression"}
+//mention tag/groupname to execute these cases
+
+
+data parameterizaton:
+excel, excelutility method
+db, 
+xml,
+featurefile- 
+
+*****CUCUMEBER DATA PARAMETERIZATION***
+1] single data pass as below:
+
+And Enter user name and password
+
+2]to pass multiple test data we need to use Scenario Outline keyword to use multiple runs with ifferent data
+
+Scenario outline must contain Examples section
+We are going to pass test data in Examples sectionn
+
+Scenario - /when single test data
+Scenario Outline:  /when multiple set of data
+
+Scenario Outline: Verfiy user is able to navigate to my account info page
+Given When user is on home page
+When Click on Sign In link
+And Enter user name and password
+And Close the browser
+Examples:
+        |Username | Password |
+        |demo     | 1234     |
+        |demo2     | 1234     |
+
+Cucumeber keywords:
+features
+glue
+plugin
+tags
+
+sCEANRIO 
+SCENARIO OUTLINE- when data passed in feature file.
+tags to categorise test cases
+
+
+We are hardcoded locators -
+we use page object model to handle locators
+
+use OR in stepdefinition file as reference 
+OR page;
+
+
+create object to OR class as below
+page=new OR(d);
+page.linkSignin.click();
+//call resable function
+page.filllogin(username, password);
+
+
+Common class to use same URL, browser 
+else we can read from excel also...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+********12102018******************
+**************************************************************************
+                            Hooks
+*************************************************************************
+
+Hooks are blocks of code that can run at various points in the Cucumber execution cycle. 
+
+They are typically used for setup and teardown of the environment before and after each scenario.
+
+
+Before hooks run before the first step of each scenario.
+
+After hooks run after the last step of each scenario, even when steps are failed, undefined, pending, or skipped.
+
+Tagged hooks ---> Hooks can be conditionally selected for execution based on the tags of the scenario. 
+
+To run a particular hook only for certain scenarios, you can associate a Before or After Hook with a tag expression.
+
+--------------------------------------------------------------------------
+
+Background ---> Occasionally you’ll find yourself repeating the same Given steps in all of the scenarios in a feature.
+
+A Background is run before each scenario, but after any Before hooks. In your feature file, put the Background before the first Scenario.
+
+You can only have one set of Background steps per feature. If you need different Background steps for different scenarios, you’ll need to split them into different feature files.
+
+**************************************************************************
+
+Maven ---> To update project depencies automatically
+
+1. Install Maven plugin if not installed
+
+2. Create Maven project
+
+
+
+
+Created common class and its made relation to login child class
+
+These are like listeners in TestNG
+
+with help of cucumber hooks we can launch and close browsers automatically..
+****Scenario hooks:
+These are block of code run at varius poitns.
+use to setup and teardown the environment before and after the each sceanrio.
+
+
+**Before: hooks run before first step of scenario
+**After: hooks runs after last step of each scenario
+even steps are failed, pending,skipped..also.
+
+
+create new class as Hooks
+
+@Before
+public void setUp()
+{
+ system.outprintln("**Before each scn***);
+ Common.launchBrowser();
+}
+@After
+public void tearDown()
+{
+ system.outprintln("**After each scn***);
+ Common.closeBrowser();
+}
+
+
+**TAGGED HOOKS-
+______________________
+These hooks are selected to execute based on scenario.
+You can associate a Before or After Hook with a tag expression.
+
+if we use both hook, then default hook -then tagged hook will executed.
+
+we can set order of scenarios in cucumner
+
+
+
+
+**BACKGROUND keyword***
+______________________
+Definition: Repeating the same Given steps in all feature sceanrios
+this is similar to hooks.. 
+
+when to use: hooks then background will execute.
+Put Background before the first sceaniio.
+
+How works: it works one set of background steps for one feature file.
+
+
+**How to write test case in folder sctructure:***
+______________________
+
+we have 3 folders here in cucumber:
+stepdef- code
+features- scenarios
+Reports-results
+
+
+***********MAVEN*************
+Maven- we use to update project dependancies automatically in project
+
+Maven is a build tool/DevOps tool. to generate build
+
+Steps to configure Maven:
+
+1. install Mavenplugin if not installed
+  in general it will be installed with testNG.
+  Eclipse marketplace -search by Maven / 
+  m2e plugin required [Maven Integration for Eclipse 1.5.0
+
+2.Create a Maven project (instead of java project)
+  File - new - other -maven- maven project-next -
+  select maven archetype-quickstart 1.1 -then next-
+  enter ArtifactiD/project name (MavenProj)-then Finish
+
+src/main
+src/testJRE
+Maven Dependanies
+SRC
+target
+pom.xml
+
+Open pom.xml--->
+Overview
+Dependancies
+
+***ADD Dependanceies in Maven project:
+
+cucumber core, Cucumber java
+open mvnrepository.com--search with cucumber core 1.2.5
+a] dependancies tab -click add and enter below details.of jar files
+Group Id, artifact Id, version details of JAR Files
+b] 2nd way to add in pom.xml 
+<dependacy>
+--
+--
+</dependacy>
+
+4 Oct
+8 Oct
+9 Oct
+10 Oct
+
+
+Project folders/structure/explian architecture of framework
+
+my framework has 5 folders
+
+Config-- Fodler will have property file/browser URL, locator, OR, reusable functions, , 
+Stepdefinition-- Fodler will have actual test scripts/step definitions
+Feature -Fodler will have feature files with features
+Reports-- Fodler will have test result html reports
+
+
+Maven Project -- we can update latest jar in pom/xml and update version
+it will build with latest jars..
+poject dependancies can be updated automatically..
+
+
+How to share code among your team members:
+version controlling tools -to share code and update among the team
+SVN-
+PVCS-
+GIT-
+TFS-
+
+Username, Password, URL of shared repository/VSS:
+
+
+SVN Checkout
+
+
+
+********13102018******************
+**************************************************************************
+                            maven repository
+*************************************************************************
+
+
+Open POM.xml and update depandancies and click on save pom.xml
+all relavant jars will be downloaded and build will get ready.
+Selenium java 3.13 jar -artifact id
+
+Creating Common class..
+
+
+Maven project -create new folder and name as Feature Files
+Create new file and name as Login.feature
+
+Cucumber project create two packages
+1 package - src/main/java - config-- save code with locators, reusable functions
+2. package -src/test/java - stepdef
+
+Download Apache commons-exec-1.3.jar file 
+
+
+********14102018******************
+Java ---> Object Oriented Programming Language
+
+Var ---> Memory location name
+
+i. Instance Var
+ii. Local Var
+iii. Static Var ---> static String company="QTT";
+iv.  Final Var  ---> final float PI=3.14
+
+
+int x=10;
+
+class A
+{
+  int x,y ---> Instance var
+  void sum(int a,int b) ---> Local Var
+  {
+    ===
+    for(int i=0;i<10;i++)
+    {
+      ===
+      ===
+    }
+    ===
+  }
+  void sub()
+  {
+    ===
+    
+    ==== 
+  }
+
+}
+
+***************************************************************************
+
+int x;
+
+x=2;
+
+1. Primitive ---> Single
+2. Non Primitive ---> Group of values
+
+boolean x=true/false;
+
+char ch='a';
+----------------------------------------------------------------------------
+
+int a[]={1,2,3,4}
+      OR
+int varname[]=new int[size]
+
+int b[]=new int[4];
+
+i. length ---> a.length
+ii. equals --> Arrays.equals(a,b) ---> T/F 
+
+int varname[][]=new int[rowsize][colsize]
+
+int a[][]=new int[3][3]
+
+String ---> Collection of char's
+
+String s1="Welcome to java";
+String s2=new String("Hello")
+
+char ch[]={'j','a','v','a'}
+String s3=new String(ch)
+
+1. length() ---> s1.length()
+2. concat() ---> s1.concat(s3) ---> s1+s3
+3. equals() ---> s1.equals(s2) ---> T/F
+4. equalsIgnoreCase() ---> s1.equalsIgnoreCase(s2) ---> T/F
+5. contains() --> s1.contains(s3) ---> T/F
+
+
+int x=10 - memory location
+
+Instance variable-variable defined inside class, outsde method- Instance variable
+scope - we can access within the class
+
+Local variable-variable defined in a method called local variable
+[scope - within method or block]
+
+Static variable- when refer common properties go for static variables
+static keyword should be used static String company="QTT"
+SCOPE- 
+
+Final variable-to define constants go for final variables
+final float pi=3.14// final keyword before data is called final variable
+
+
+class A
+{
+int x,y  //x,y are instance variables
+void sum(int a, intb) //a,b are local variables
+   {
+     
+   } 
+void sub()
+  { 
+   ===
+   for(int 1=0;i<10;i++)
+   {
+   }
+  }
+
+}
+
+public- avilable to all 
+static method - no need to create object [public static void
+
+
+* STRING-- collection of characters /group of char
+we can define in 3 ways of string as below...
+a) String s1="welcome"
+b) String s2= new String("Hello")
+c) chr ch[]={'j','a','v','a'}
+   Sting s3=new string(ch)
+
+
+int a[]={1,2,3,4} ----int array
+chr ch[]={'j','a','v','a'} --char array
+
+
+****STRING HANDLING METHODS**
+
+1]length()--- to find number of char in string--s1.length()
+2] concat()-- to combind two strings -- s1.concat(s3)--s1+s3
+3] equals()-to compare two strings --s1.equals(s2)---> t/F
+4] equalsIgnoreCase()-- s1.qualsIgnoreCase(s2)--- T/F
+5] contains()  --to search one string in other string we use this ffunction.
+    s1.contains(s3)--- T/F
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+********16102018******************
+***************************************************************************
+                        Automation Test Life Cycle
+***************************************************************************
+JIRA ---> JIRA is Atlassian's project management software used for bug tracking, issue tracking, and task planning.
+
+Ticket ---> PO ---> CYC-404
+URL
+User Name
+Password
+Agile ---> Scrum framework ---> Sprint
+2 Weeks -Sprint planning
+
+**************************************************************************
+
+The leading open source automation server, Jenkins provides hundreds of plugins to support building, deploying and automating any project. 
+
+---> this can be even used for something other than software build.
+
+1. Download jenkins.war
+  https://jenkins.io/download/
+
+2. To start jenkins
+   java -jar jenkins.war
+C:\Users\venkat\.jenkins\secrets\initialAdminPassword 
+  894d8989900d46ef9079acc6ce0b3fd1
+
+To ensure Jenkins is securely set up by the administrator, a password has been written to the log (not sure where to find it?) and this file on the server:
+C:\Users\venkat\.jenkins\secrets\initialAdminPassword
+Please copy the password from either location and paste it below.
+
+venkat
+Ammulu@786
+http://localhost:8080/job/NewJob/
+
+3. To open in browser console
+   http://localhost:8080
+
+4. Create Job
+5. Install TestNG Results plugin
+6. Create Schedule ---> 00 21 * * 1-5
+
+s1 ---> b1
+s2 ---> b2 ----> Regression
+s3 ---> b3
+
+Jenkins is a leading opensource tool/server which will used for Build, deploy and automate projects
+we use for scheduling jobs
+1] Download-LTS- Jenkin jenkins.war-Jar files 
+Geneic Java package
+https://jenkin.io
+click on Download. lts secction-generic java package [war]-download..
+
+
+jenkins also called as CI server
+2] To start servers use below command
+open CMD and navigate to war file location and execute command..
+ java -jar jenkins.war     
+console shows the password..
+
+3]Open Jenkins in bowser console..
+  http://ipaddress:portnumber  [remote machine]
+  http://localhost:8080
+user admin and password then login to Jenkins..
+
+
+4] Create job for execution in Jenkins server
+click on New Item link--> Enter Item name as Selenim_Oct18
+
+click free style project and click ok button
+ General | SCM|Build Triggers|Build|Post Build actions
+
+General---> click Add -- check checkbox of 'use custom workspacce'
+copy the path of batch file and paste n Directory fiedl.
+
+
+Build --->Click on Add build step- select option as "Execute windows batch command."
+add command -- call Run.bat
+click apply and save buttons.
+
+5] TestNG Results plugin to be configured with jenkins to get the complete test results 
+Go to -->' Manage jenkins' section
+
+Manage plugins -hyperlink click on it
+Updated || Available || Installed || Advanced tabs
+Go to Available section 
+select TestNG Results and Download now and isntall
+
+Download 
+Stop and start jenkins server..
+
+
+6] Update Jar settings
+Click on job link -- Post Build actions tab 
+select Publish TestNG results option
+apply and save.
+
+
+Now click on Build schedule button ..
+
+7] Create Job scheduler 
+Click on Job link -- Go to |Build Trigger| tab section
+
+chcek Build Periodically check box..
+select execute options..
+schedule box enter detials
+
+MINUTE HOUR DOM MONTH DOW 
+14 8 16 10 2
+minute -0-59
+hour 0-23
+Day of the month 1-31
+Month 1-12
+Day of the month 0-7 
+
+
+********17102018******************
+
+                       Selenium GRID
+**************************************************************************
+
+The Hub is the central point that will receive all the test request and distribute them the the right nodes.
+
+1. To Start hub 
+
+   java -jar selenium-server-standalone-3.14.0.jar -role hub
+
+2. To view the status of the hub [default hub port -4444]
+
+   http://localhost:4444/grid/console
+
+3. To start hub in custom port
+
+   java -jar selenium-server-standalone-3.14.0.jar -role hub -port 1234
+
+4. To register the node1
+
+   java -jar -Dwebdriver.gecko.driver=E:\Driver\geckodriver.exe -Dwebdriver.chrome.driver=E:\Driver\chromedriver.exe selenium-server-standalone-3.14.0.jar -role node  -hub http://192.168.1.10:4444/grid/register
+
+5. To register the node2
+
+   java -jar -Dwebdriver.gecko.driver=D:\DriverServer\geckodriver.exe -Dwebdriver.chrome.driver=D:\DriverServer\chromedriver.exe selenium-server-standalone-3.14.0.jar -role node  -hub http://192.168.1.10:4444/grid/register 
+
+
+WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capability);
+
+RemoteWebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),new ChromeOptions());
+
+GRID--- Transperantly distribute to multiple machines/systems
+start hub and register nodes
+
+HUB --configure hub 
+Node1 Node2 node3
+
+Send request to hub --Hub will distribute load to nodes.
+
+Replacement of VMWare is Docker 
+1 physical machine - we are ging to install Docker
+in Docker we are going to create Hub start nodes 
+
+
+
+need to start hub- then restart the n number of nodes
+Hub will receive request and then it distribute load among the node.
+
+
+GRID Supports for below
+[more details-Selenium -download- GRID wiki page]
+1. Distibuted testing
+2. Supports parallel execution [OS/Browser]
+3. Minimizes the batch processing time
+4. Manage multiple browsers/OS 
+
+****HUB***
+HUB is central point which is receive request and distribute them to right nodes
+1. Command to start HUB
+
+java -jar jarfilename 
+
+2. To view status of the hub
+ http..localhost:4444/grid/consile
+ default port 4444 for hub and selenium server
+
+3. Start hub in custom port
+  java -jar sele- role hub = port 1234
+
+4. To strat the node 
+java -jar selenium server name.jar- -role node -hub
+ http://localhost:4444/grid/register
+WE NEED TO RUN THIS COMMAND IN REMOTE MACHINE
+ sele server jar file, jdk s/w are required..
+
+5. connect remote machine -mstsc -- enter system name or ip - connect to remote machines
+check s/w in remote machines:
+java -version
+
+how to register nodes 
+how to send req to 
+ http://192.168.1.10:4444/grid/register 
+navigate to sel ser jar file location and execute above comand in cmd 
+it shows as ready to use...
+
+
+localhost:4444/grid/cosole will show the nodes which are started and ready to use..
+
+supports one instance for one node in IE
+supports more instances for one node in FF
+
+java -jar selenium-server-
+ http://192.168.1.10:4444/grid/register
+
+
+6. we need remote webdriver class to execute cases in remote machines and below 2 parameters required 
+a] URL of hub and  
+b] options of browser 
+
+WebDriver driver=new remote driver
+Desired capabilities class [previous versions of selenium]
+Firefoxoptions class - we can design browser...
+Chromeoptions class - 
+
+We need FF geko driver in remote machine..
+FF 64 version 64-bit
+GC- 69 32-bit 
+geco driver 
+chrome driver -download in remote machines
+
+set the gc drive path for remote machines ..
+
+
+ -Dwebdriver.gecko.driver=E:\Driver\gechodriver.exe selenium-server-standalone-3/14/0.jar
+
+
+
+
+
+
+********18102018******************
+
+
+
+
+********20102018******************
+
+OCT 20,2018
+
+Third party tool
+AutoIT Tool to File upload and download/handle windows controls
+suports only windows not for Mac..
+ 
+1. JS popup/alerts- Webdriver
+
+werbriver API we can handle JS alerts using methods below.
+Accept- click OK
+Dismiss- click Cancel button
+Gettext- get alert/confirm text
+
+2 Browser popup/alerts- AUTOIT
+When we are download jar file from site...browser popups.
+
+A] we can block popups user browser settings
+tools-options--content jar== 'always ask'--this 
+change to 'save file'.
+then jar file will download in specified path..
+
+brwoser is desktop..
+To handle bowser popup we are using AUTOIT -third party tool.
+
+
+3. OS popup/alerts--AUTOIT
+www.sendspace.com
+if we want to upload file -OS will ask to select path of file by showing OS popup/ browse file options..
+We can handle OS alerts/popup using AUTOIT tool..
+
+http://autoitscript.com  [official website]
+Autoit is basic scripting language-desinged for automating windows GUI and general scripting.
+We can simulate keystrokes and mouse movements.
+
+Download AutoIT install Full version of AutoIT
+https://www.autoitscript.com/site/autoit/downloads/
+
+after install we have SoTE- autoit Editor-to write test cases..
+
+as in webdriver-we should have clarity on java basics and locators identiication.
+
+AutoIT functions are 2 types
+a]Built In functons- 
+WebDriver buiilt in functions- Date, Get, Click, Sendkey
+
+b]User Defined Functions-
+WebDriver buiilt in functions-Launch browser, close browser 
+
+
+Requirement:
+open notepad type text and click close button without save..
+
+launch exe  - Run
+wait - WinWaitActive
+Send - to type the text 
+WinClose- to close window
+
+
+x.java
+x.au3  file extension..
+
+webdriver - inspect element to check source code 
+AutoIT- AutoITwindows Info - to chcek element source code
+
+SCN- upload file 
+www.sendspace.com
+
+WinWaitactive("File Upload", "",4)
+Send("E:\Test.txt")
+Send("Enter")
+
+Create New Webdriver class- FileUpload
+
+new ProcessBuilder("E:\\AutoIT.)
+//to call autoIT script to webdriver
+
+
+
+
+********17102018******************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
