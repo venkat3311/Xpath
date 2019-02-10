@@ -1,0 +1,163 @@
+EXPRESSION	DESCRIPTION
+nodename	Selects all nodes with the name “nodename“
+/	Selects from the root node
+//	Selects nodes in the document from the current node that match the selection no matter where they are
+.	Selects the current node
+..	Selects the parent of the current node
+@	Selects attributes
+
+XPath wildcards can be used to select unknown XML elements.
+WILDCARD	DESCRIPTION
+*	Matches any element node
+@*	Matches any attribute node
+node()	Matches any node of any kind
+
+Select nodes with xpath
+EXPRESSION	DESCRIPTION
+nodename	Selects all nodes with the name “nodename“
+/	Selects from the root node
+//	Selects nodes in the document from the current node that match the selection no matter where they are
+.	Selects the current node
+..	Selects the parent of the current node
+@	Selects attributes
+
+Predicates are used to find a specific node or a node that contains a specific value. Predicates are always embedded in square brackets.
+
+XPath wildcards can be used to select unknown XML elements.
+
+WILDCARD	DESCRIPTION
+*	Matches any element node
+@*	Matches any attribute node
+node()	Matches any node of any kind
+
+
+An axis defines a node-set relative to the current node. Following are axes defined by default.
+
+AXISNAME	RESULT
+ancestor	Selects all ancestors (parent, grandparent, etc.) of the current node
+ancestor-or-self	Selects all ancestors (parent, grandparent, etc.) of the current node and the current node itself
+attribute	Selects all attributes of the current node
+child	Selects all children of the current node
+descendant	Selects all descendants (children, grandchildren, etc.) of the current node
+descendant-or-self	Selects all descendants (children, grandchildren, etc.) of the current node and the current node itself
+following	Selects everything in the document after the closing tag of the current node
+following-sibling	Selects all siblings after the current node
+namespace	Selects all namespace nodes of the current node
+parent	Selects the parent of the current node
+preceding	Selects all nodes that appear before the current node in the document, except ancestors, attribute nodes and namespace nodes
+preceding-sibling	Selects all siblings before the current node
+self	Selects the current node
+FOLLWING:
+Xpath=//*[@type='text']//following::input
+
+ANCESTOR:
+The ancestor axis selects all ancestors element (grandparent, parent, etc.) of the current node as shown in the below screen.
+Xpath=//*[text()='Enterprise Testing']//ancestor::div
+Xpath=//*[text()='Enterprise Testing']//ancestor::div[1]
+
+
+
+
+
+4.5. XPath Operators
+Below is a list of xpath operators that can be used in XPath expressions:
+
+OPERATOR	DESCRIPTION	EXAMPLE	RETURN VALUE
+|	Computes two node-sets	//book | //cd	Returns a node-set with all book and cd elements
++	Addition	6 + 4	10
+-	Subtraction	6 – 4	2
+*	Multiplication	6 * 4	24
+div	Division	8 div 4	2
+=	Equal	price=9.80	true if price is 9.80
+false if price is 9.90
+!=	Not equal	price!=9.80	true if price is 9.90
+false if price is 9.80
+<	Less than	price<9.80	true if price is 9.00
+false if price is 9.80
+< =	Less than or equal to	price< =9.80	true if price is 9.00
+false if price is 9.90
+>	Greater than	price>9.80	true if price is 9.90
+false if price is 9.80
+>=	Greater than or equal to	price>=9.80	true if price is 9.90
+false if price is 9.70
+or	or	price=9.80 or price=9.70	true if price is 9.80
+false if price is 9.50
+and	and	price>9.00 and price<9.90	true if price is 9.80
+false if price is 8.50
+mod	Modulus (division remainder)	5 mod 2	1
+
+
+
+XPath Locators	Find different elements on web page
+ID	To find the element by ID of the element
+Classname	To find the element by Classname of the element
+Name	To find the element by name of the element
+Link text	To find the element by text of the link
+XPath	XPath required for finding the dynamic element and traverse between various elements of the web page
+CSS path	CSS path also locates elements having no name, class or ID.
+
+
+Xpath=//input[@type='text']				
+Xpath=	//label[@id='message23']
+Xpath=	//input[@value='RESET']
+Xpath=//*[@class='barone']
+Xpath=//a[@href='http://demo.guru99.com/']
+Xpath= //img[@src='//cdn.guru99.com/images/home/java.png']
+
+CONTAINS
+Xpath=//*[contains(@type,'sub')]  
+Xpath=//*[contains(@name,'btn')]
+Xpath=//*[contains(@id,'message')]	
+Xpath=//*[contains(text(),'here')]
+Xpath=//*[contains(@href,'guru99.com')]	
+
+USING OR AND
+Xpath=//*[@type='submit' OR @name='btnReset']
+Xpath=//input[@type='submit' and @name='btnLogin']
+
+STARTS WITH
+Xpath=//label[starts-with(@id,'message')]
+
+Text() function:
+Xpath=//td[text()='UserID']		
+
+
+import java.text.ParseException;
+import java.util.List;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import java.text.NumberFormat;
+
+
+public class MaxFromTable {
+    public static void main(String[] args) throws ParseException {
+    	WebDriver wd;
+		System.setProperty("webdriver.chrome.driver","G://chromedriver.exe");
+		 wd= new ChromeDriver();
+		 wd.get("http://demo.guru99.com/test/web-table-element.php"); 
+		 String max;
+	     double m=0,r=0;
+		 
+	       //No. of Columns
+	        List  col = wd.findElements(By.xpath(".//*[@id='leftcontainer']/table/thead/tr/th"));
+	        System.out.println("Total No of columns are : " +col.size());
+	        //No.of rows
+	        List  rows = wd.findElements(By.xpath (".//*[@id='leftcontainer']/table/tbody/tr/td[1]"));
+	        System.out.println("Total No of rows are : " + rows.size());
+	        for (int i =1;i<rows.size();i++)
+	        {    
+	            max= wd.findElement(By.xpath("html/body/div[1]/div[5]/table/tbody/tr[" + (i+1)+ "]/td[4]")).getText();
+	            NumberFormat f =NumberFormat.getNumberInstance(); 
+	            Number num = f.parse(max);
+	            max = num.toString();
+	            m = Double.parseDouble(max);
+	            if(m>r)
+	             {    
+	                r=m;
+	             }
+	        }
+	        System.out.println("Maximum current price is : "+ r);
+    }
+}
